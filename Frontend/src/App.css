@@ -1,0 +1,724 @@
+/* =========================================
+   GLOBAL APP
+========================================= */
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(79, 70, 229, 0.08),
+      transparent 35%
+    ),
+    #f7f8fc;
+  color: #172033;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e7e9f0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  background: #4f46e5;
+  color: white;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+.logo-section h1 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo-section p {
+  margin: 2px 0 0;
+  color: #7b8190;
+  font-size: 12px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 13px;
+  border-radius: 20px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container {
+  width: 86%;
+  max-width: 1400px;
+
+  margin: 42px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.input-card,
+.preview-card {
+  background: white;
+
+  border: 1px solid #e6e8ef;
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 12px 40px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.card-header,
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 28px;
+}
+
+.card-header h2,
+.preview-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.card-header p,
+.preview-header p {
+  margin: 7px 0 0;
+
+  color: #7b8190;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.sparkle {
+  font-size: 27px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #303747;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-row span {
+  font-size: 12px;
+  color: #9298a5;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border: 1px solid #dfe2ea;
+  border-radius: 11px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  background: #fff;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* =========================================
+   TOPIC TEXTAREA
+========================================= */
+
+.topic-container {
+  position: relative;
+}
+
+.topic-container textarea {
+  width: 100%;
+  height: 170px;
+
+  box-sizing: border-box;
+
+  resize: vertical;
+
+  padding: 14px 55px 14px 14px;
+
+  border: 1px solid #dfe2ea;
+  border-radius: 12px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+
+  transition: 0.2s;
+}
+
+.topic-container textarea:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* =========================================
+   VOICE BUTTON
+========================================= */
+
+.voice-button {
+  position: absolute;
+
+  right: 12px;
+  bottom: 12px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: #eef2ff;
+
+  font-size: 18px;
+
+  transition: 0.2s;
+}
+
+.voice-button:hover {
+  transform: scale(1.08);
+  background: #e0e7ff;
+}
+
+.voice-button.listening {
+  background: #fee2e2;
+  animation: pulse 1.2s infinite;
+}
+
+.listening-text {
+  margin-top: 8px;
+
+  color: #dc2626;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+/* =========================================
+   GENERATE BUTTON
+========================================= */
+
+.generate-button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #4f46e5;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.22);
+
+  transition: 0.2s;
+}
+
+.generate-button:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.generate-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================================
+   SPINNER
+========================================= */
+
+.spinner {
+  display: inline-block;
+
+  width: 15px;
+  height: 15px;
+
+  margin-right: 8px;
+
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   LINKEDIN ICON
+========================================= */
+
+.linkedin-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #0a66c2;
+  color: white;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+  min-height: 420px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #858b98;
+}
+
+.empty-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #eef2ff;
+
+  font-size: 30px;
+
+  margin-bottom: 18px;
+}
+
+.empty-state h3 {
+  margin: 0 0 7px;
+
+  color: #353b4b;
+
+  font-size: 16px;
+}
+
+.empty-state p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   POST PREVIEW
+========================================= */
+
+.post-preview {
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  background: white;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #f0f1f4;
+}
+
+.profile-avatar {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e5e7eb;
+
+  font-weight: 800;
+  color: #555b68;
+}
+
+.profile-row h3 {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.profile-row span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+
+  color: #8a909d;
+}
+
+
+/* =========================================
+   POST CONTENT
+========================================= */
+
+.post-content {
+  padding: 18px 0;
+
+  max-height: 360px;
+
+  overflow-y: auto;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+.post-content p {
+  margin: 0;
+}
+
+
+/* =========================================
+   EDIT POST
+========================================= */
+
+.edit-post {
+  width: 100%;
+  min-height: 300px;
+
+  box-sizing: border-box;
+
+  margin-top: 18px;
+
+  padding: 14px;
+
+  resize: vertical;
+
+  border: 1px solid #c7d2fe;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #f0f1f4;
+}
+
+.edit-button,
+.publish-button {
+  flex: 1;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.edit-button {
+  background: white;
+
+  border: 1px solid #dfe2ea;
+
+  color: #404656;
+}
+
+.publish-button {
+  border: none;
+
+  background: #0a66c2;
+
+  color: white;
+}
+
+.publish-button:hover {
+  background: #084f96;
+}
+
+.publish-form {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #f0f1f4;
+}
+
+.publish-textarea {
+  width: 100%;
+  min-height: 170px;
+  box-sizing: border-box;
+  padding: 14px;
+  resize: vertical;
+  border: 1px solid #dfe2ea;
+  border-radius: 12px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: 0.2s;
+}
+
+.publish-textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.optional-label {
+  display: inline;
+  color: #9298a5;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.post-to-linkedin-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #0a66c2;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.post-to-linkedin-button:hover {
+  background: #084f96;
+}
+
+.post-to-linkedin-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.post-result {
+  margin-top: 16px;
+  padding: 13px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.post-result.success {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.post-result.error {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.post-result pre {
+  margin: 6px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  text-align: center;
+
+  padding: 25px;
+
+  color: #9298a5;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 0 5%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .main-container {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  .input-card,
+  .preview-card {
+    padding: 20px;
+  }
+
+  .post-actions {
+    flex-direction: column;
+  }
+
+}

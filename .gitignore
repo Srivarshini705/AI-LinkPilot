@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# LinkedIn/browser session
+linkedin_session/
+
+# Logs
+*.log
+logs/
+
+# Cache
+image_cache/
+
+# Generated screenshots
+screenshots/
+*.png
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
